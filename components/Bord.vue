@@ -1,5 +1,5 @@
 <template>
-<div id="bord">
+<div id="bord" @contextmenu="no($event)">
   <Tile v-for="tile in 100"></Tile>
 </div>
 </template>
@@ -8,7 +8,12 @@
     import Tile from "./Tile";
     export default {
         name: "Bord",
-      components: {Tile}
+      components: {Tile},
+      methods:{
+          no:function (e) {
+            e.preventDefault()
+          }
+      }
     }
 </script>
 
