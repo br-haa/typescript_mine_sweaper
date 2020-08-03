@@ -1,7 +1,7 @@
 <template>
 <div class="tile" @click="check()" @contextmenu="flag($event)">
-  <div class="content">
-{{showing}}
+  <div class="content" v-if="showing">
+{{TileType}}
   </div>
 </div>
 </template>
@@ -11,15 +11,20 @@
         name: "Tile",
       data(){
           return{
-           showing: 0
+           showing: false
           }
+      },
+      props: {
+        TileType:{
+          type: String
+        },
       },
       methods:{
           check:function () {
-            this.showing = 1
+            this.showing = true
           },
         flag: function (e) {
-        this.showing = 2
+        this.showing = true
         e.preventDefault();
         }
       }
@@ -29,5 +34,11 @@
 <style scoped>
 .tile{
   border: white 3px solid;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 2vw;
+  width: 2vw;
+  box-sizing: border-box;
 }
 </style>
