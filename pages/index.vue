@@ -9,5 +9,7 @@ export default Vue.extend({})
 </script>
 
 <style>
-
+body{
+  background: linear-gradient( to bottom right, white, #d0d0d0);
+}
 </style>

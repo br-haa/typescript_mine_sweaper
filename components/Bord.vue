@@ -54,7 +54,6 @@
               if(x !== undefined){
                 score = score + x.id
                 this.items[ci].score = score
-                console.log('left!'+ ci)
               }
             })
           }
@@ -63,7 +62,6 @@
               if(x !== undefined){
                 score = score + x.id
                 this.items[ci].score = score
-                console.log('right!'+ ci)
               }
             })
           }
@@ -72,7 +70,6 @@
               if(x !== undefined){
                 score = score + x.id
                 this.items[ci].score = score
-                console.log('normal!'+ ci)
               }
             })
           }
@@ -128,8 +125,10 @@
 #bord{
   display: grid;
   grid-gap: .3vw;
-  padding: .3vw;
+  padding: .5vw;
   box-sizing: border-box;
-  background: tan;
+  background: linear-gradient( to bottom right, white, #dddddd);
+  box-shadow: -10px -10px 25px #ffffff, 10px 10px 25px #000000;
+  border-radius: 10px;
 }
 </style>
